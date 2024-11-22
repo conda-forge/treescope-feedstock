@@ -1,12 +1,13 @@
 {% set name = "treescope" %}
 {% set version = "0.1.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/treescope-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/treescope-{{ version }}.tar.gz
   sha256: 67763ee24c841ada531521538a7dec407cb8902310634bead2e6bb315a5f2a2c
 
 build:
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - flit-core >=3.8,<4
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy >=1.25.2
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/google-deepmind/treescope#readme
