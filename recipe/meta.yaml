@@ -1,5 +1,5 @@
 {% set name = "treescope" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/treescope-{{ version }}.tar.gz
-  sha256: 2c82ecb633f18d50e5809dd473703cf05aa074a4f3d1add74de7cf7ccdf81ae3
+  sha256: 6a81bac3dccf84a8a8635fe43531e28c2c7e4ffbf571693259e54b9329612633
 
 build:
   noarch: python
